@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    height: 20%;
+    margin-bottom: 15px;
+    margin-left: 2%;
+}
+
+.news img {
+    width: 97%;
+    height: 97%;
+    border-radius: 5px;
+}

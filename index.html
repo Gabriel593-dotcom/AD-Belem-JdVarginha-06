@@ -7,7 +7,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-    <iframe src="header.html" frameborder="0"></iframe>
+<body class="flex">
+    <header class="container-header">
+        <div class="menu-bg"></div>
+        <div class="menu container-menu">
+            <div class="opcoes-menu" id="home"><a href="#">Home</a></div>
+            <div class="opcoes-menu" id="grupos"><a href="#">Grupos</a></div>
+            <div class="opcoes-menu" id="nossa_historia"><a href="#">Nossa História</a></div>
+        </div>
+    </header>
+    <hr>
+    <section id="section">
+        <iframe src="home.html" frameborder="0" scrolling="no" id="home-iframe"></iframe>
+    </section>
+    <script src="script/index.js">
+    </script>
 </body>
 </html>
