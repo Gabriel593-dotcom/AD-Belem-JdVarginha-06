@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/homepage.css">
+    <script>
+        //ajustando altura do iframe para a homepage
+        window.onload = function () {
+            let iframe = parent.document.getElementById("homepage-iframe");
+            if (iframe) {
+                console.log("caiu aqui script");
+                let contentSize = document.getElementById("container").scrollHeight + 50
+                iframe.height = contentSize;
+                localStorage['iframeHomePageSize'] = contentSize;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="news">
+            <div>
+                <h2>teste</h2>
+            </div>
+            <div>
+                <img src="imagens/header.jpg" alt="">
+            </div>
+            <div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quo obcaecati explicabo impedit voluptatem ea, expedita, animi, deleniti harum fugit error consectetur! Recusandae ad, excepturi odit quis nam non.</p>
+            </div>
+        </div>
+        <div class="news">
+            <div>
+                <h2>teste</h2>
+            </div>
+            <div>
+                <img src="imagens/header.jpg" alt="">
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quam veritatis, quisquam ab atque accusantium exercitationem rem minus dignissimos qui voluptatibus laborum! Est, suscipit fugit. Explicabo cumque minima ipsa iure.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

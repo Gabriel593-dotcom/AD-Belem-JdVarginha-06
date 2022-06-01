@@ -1,9 +1,9 @@
-let btnHome = document.getElementById("home");
+let btnhomepage = document.getElementById("home");
 let btnGrupos = document.getElementById("grupos");
 let btnNossaHistoria = document.getElementById("nossa_historia");
 
-btnHome.addEventListener("click", function(){
-    addContentOnSection("home.html", "home-iframe");
+btnhomepage.addEventListener("click", function(){
+    addContentOnSection("homepage.html", "homepage-iframe");
 });
 
 btnGrupos.addEventListener("click", function(){
@@ -24,8 +24,9 @@ function addContentOnSection(name, idName) {
     const iframe = document.createElement("iframe");
     iframe.setAttribute("src", name);
     iframe.setAttribute("scrolling", "no");
-    //Ajuste de altura do iframe para a homepage
-    if(idName == "home-iframe"){
+    //Ajuste de altura do iframe para a homepagepage
+    if(idName == "homepage-iframe"){
+        console.log("caiu aqui")
         iframe.setAttribute("height", localStorage["iframeHomePageSize"]);
     }
     document.getElementById("section").appendChild(iframe); 
