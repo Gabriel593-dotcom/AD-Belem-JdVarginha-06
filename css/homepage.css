@@ -8,7 +8,12 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        align-items: center;
+    }
 }
 
 .news {
@@ -21,8 +26,15 @@ body {
     text-align: center;
 }
 
+@media only screen and (max-width: 550px) {
+    .news {
+        width: 90%;
+    }
+}
+
 .news div h2 {
-    font-family: "Mohave";
+    font-family: "Anson";
+    font-weight: 100;
     color: #FFF;
 }
 

@@ -2,3 +2,8 @@
     font-family: "Mohave";
     src: url("../fontes/Mohave/Mohave-Bold.otf");
 }
+
+@font-face {
+    font-family: "Anson";
+    src: url("../fontes/Anson/web/anson-regular-webfont.ttf");
+}
