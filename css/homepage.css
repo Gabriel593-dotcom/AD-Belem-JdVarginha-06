@@ -1,26 +1,41 @@
+@import "fontes.css";
 body {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .news {
-    border: 1px solid black;
+    background-color: #808080;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
     height: 20%;
     margin-bottom: 15px;
     margin-left: 2%;
+    text-align: center;
+}
+
+.news div h2 {
+    font-family: "Mohave";
+    color: #FFF;
 }
 
 .news img {
     width: 97%;
     height: 97%;
     border-radius: 5px;
+}
+
+.news div p {
+    font-family: Helvetica;
+    color: #FFF;
+    font-weight: 300;
+    padding: 2%;
+    text-align: justify;
 }
