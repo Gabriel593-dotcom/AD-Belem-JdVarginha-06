@@ -16,6 +16,18 @@ body {
     }
 }
 
+.title-container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.container h1 {
+    font-family: "Mohave";
+    color: #4682B4;
+    font-weight: bolder;
+}
+
 .news {
     background-color: #808080;
     border-radius: 5px;
