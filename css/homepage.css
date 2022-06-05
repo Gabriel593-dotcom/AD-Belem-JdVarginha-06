@@ -8,18 +8,27 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    width: 70%;
 }
 
 @media only screen and (max-width: 550px) {
     .container {
-        align-items: center;
+        width: 100%;
     }
 }
 
 .title-container {
     display: flex;
     justify-content: center;
-    width: 60%;
+}
+
+@media only screen and (min-width: 550px) {
+    .title-container {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        margin-left: 2%;
+    }
 }
 
 .container h1 {
@@ -31,8 +40,8 @@ body {
 .news {
     background-color: #808080;
     border-radius: 5px;
-    width: 60%;
-    height: 20%;
+    width: 95%;
+    height: 25%;
     margin-bottom: 15px;
     margin-left: 2%;
     text-align: center;
@@ -40,7 +49,8 @@ body {
 
 @media only screen and (max-width: 550px) {
     .news {
-        width: 90%;
+        width: 95%;
+        margin-left: none;
     }
 }
 
@@ -48,6 +58,7 @@ body {
     font-family: "Anson";
     font-weight: 100;
     color: #FFF;
+    padding: 1%;
 }
 
 .news img {
@@ -62,4 +73,10 @@ body {
     font-weight: 300;
     padding: 2%;
     text-align: justify;
+}
+
+@media only screen and (max-width: 550px) {
+    .news div p {
+        text-align: left;
+    }
 }

@@ -11,7 +11,6 @@
         window.onload = function() {
             let iframe = parent.document.getElementById("homepage-iframe");
             if (iframe) {
-                console.log("caiu aqui script");
                 let contentSize = document.getElementById("container").scrollHeight + 50
                 iframe.height = contentSize;
                 localStorage['iframeHomePageSize'] = contentSize;
@@ -26,14 +25,14 @@
             <h1>Feed de Notícias</h1>
         </div>
         <div class="news">
-            <div>
+            <div class="news-title">
                 <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quibusdam laudantium sed corrupti. A exercitationem beatae quisquam qui dignissimos doloribus sunt et repellat est aliquam, quasi perspiciatis aperiam velit rem!</h2>
             </div>
             <hr style="border: 1px solid #FFF; width: 97%; background-color: #FFF;">
-            <div>
+            <div class="news-image">
                 <img src="imagens/header.jpg" alt="">
             </div>
-            <div>
+            <div class="news-subtitle">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quo obcaecati explicabo impedit voluptatem ea, expedita, animi, deleniti harum fugit error consectetur! Recusandae ad, excepturi odit quis nam non. Lorem ipsum dolor
                     sit amet consectetur adipisicing elit. Placeat quisquam suscipit laborum iusto repellendus dolor nulla. Deserunt maxime ea eveniet, recusandae dolores nostrum, fugiat itaque eligendi animi quae laudantium deleniti. Lorem ipsum dolor
                     sit amet consectetur adipisicing elit. Consectetur rerum, explicabo, possimus sit earum nemo vero illo hic sunt veritatis sint, tempore totam aliquid inventore? Est, tempora! Ratione, tempora repudiandae! Lorem ipsum dolor sit amet
@@ -41,18 +40,21 @@
             </div>
         </div>
         <div class="news">
-            <div>
-                <h2>Teste</h2>
+            <div class="news-title">
+                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab quibusdam laudantium sed corrupti. A exercitationem beatae quisquam qui dignissimos doloribus</h2>
             </div>
             <hr style="border: 1px solid #FFF; width: 97%; background-color: #FFF;">
-            <div>
-                <img src="imagens/header.jpg" alt="">
+            <div class="news-image">
+                <img src="imagens/gata.jpg" alt="">
             </div>
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quam veritatis, quisquam ab atque accusantium exercitationem rem minus dignissimos qui voluptatibus laborum! Est, suscipit fugit. Explicabo cumque minima ipsa iure.</p>
+            <div class="news-subtitle">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam sint quo obcaecati explicabo impedit voluptatem ea, expedita, animi, deleniti harum fugit error consectetur! Recusandae ad, excepturi odit quis nam non. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Placeat quisquam suscipit laborum iusto repellendus dolor nulla. Deserunt maxime ea eveniet, recusandae dolores nostrum, fugiat itaque eligendi animi quae laudantium deleniti. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit. Consectetur rerum, explicabo, possimus sit earum nemo vero illo hic sunt veritatis sint, tempore totam aliquid inventore? Est</p>
             </div>
         </div>
     </div>
+    <script src="script/homepage.js"></script>
 </body>
 
 </html>
