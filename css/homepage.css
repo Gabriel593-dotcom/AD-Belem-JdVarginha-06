@@ -68,11 +68,26 @@ body {
 }
 
 .news div p {
-    font-family: Helvetica;
+    font-family: "Helvetica";
     color: #FFF;
     font-weight: 300;
     padding: 2%;
     text-align: justify;
+}
+
+.news div p .news-subtitle-button {
+    border: none;
+    padding: none;
+    font-family: "Helvetica";
+    font-weight: 300;
+    font-size: 16px;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.news div p .news-subtitle-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 550px) {

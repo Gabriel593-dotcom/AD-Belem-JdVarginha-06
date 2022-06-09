@@ -33,6 +33,7 @@ function addContentOnSection(name, idName) {
     document.getElementById("section").appendChild(iframe);
 }
 
+
 function main() {
     menuEventListeners();
 }
