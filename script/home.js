@@ -26,9 +26,10 @@ function addContentOnSection(name, idName) {
     const iframe = document.createElement("iframe");
     iframe.setAttribute("src", name);
     iframe.setAttribute("scrolling", "no");
+    iframe.setAttribute("id", idName);
     //Ajuste de altura do iframe para a homepagepage
     if (idName == "homepage-iframe") {
-        iframe.setAttribute("height", localStorage["iframeHomePageSize"]);
+        iframe.height = localStorage["iframeHomePageSize"];
     }
     document.getElementById("section").appendChild(iframe);
 }

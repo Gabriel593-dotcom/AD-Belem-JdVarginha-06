@@ -1,6 +1,10 @@
-let subTitleElementTexts = [];
-let subTitleElements = document.querySelectorAll(".news-subtitle p");
-let homeIframe = parent.document.getElementById("homepage-iframe");
+function main() {
+    subTitleElementTexts = [];
+    subTitleElements = document.querySelectorAll(".news-subtitle p");
+    homeIframe = parent.document.getElementById("homepage-iframe");
+    fillArray();
+    setSeeMoreOnLoadingPage();
+}
 
 function fillArray() {
     let iterable = 0;
@@ -67,11 +71,6 @@ function isMobile() {
     }
 
     return result;
-}
-
-function main() {
-    fillArray();
-    setSeeMoreOnLoadingPage();
 }
 
 main();
