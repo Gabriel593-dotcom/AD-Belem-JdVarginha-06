@@ -30,13 +30,15 @@ body {
         width: 95%;
         margin-left: 2%;
     }
+    .title-container h1 {
+        font-size: 4em;
+    }
 }
 
 .title-container h1 {
     font-family: "Mohave";
     color: #4682B4;
     font-weight: bolder;
-    font-size: 4em;
 }
 
 .news {
