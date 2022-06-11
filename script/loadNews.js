@@ -1,5 +1,3 @@
-function main() {}
-
 export function createNewsElements(parentElement, news) {
     news.forEach(newsEl => {
         let newsElement = document.createElement("div");
@@ -29,5 +27,3 @@ export function createNewsElements(parentElement, news) {
         parentElement.append(newsElement);
     });
 }
-
-main();

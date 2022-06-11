@@ -11,17 +11,25 @@
 
 <body>
     <header>
-        <div class="menu-bg"></div>
-        <div class="menu container-menu">
-            <div class="opcoes-menu" id="home"><a href="#">Home</a></div>
-            <div class="opcoes-menu" id="grupos"><a href="#">Grupos</a></div>
-            <div class="opcoes-menu" id="nossa_historia"><a href="#">Nossa História</a></div>
-        </div>
+        <nav id="nav">
+            <div class="menu-bg"></div>
+            <div class="container-mobile-menu">
+                <button id="btn-mobile">Menu</button>
+            </div>
+            <div class="menu">
+                <div class="opcoes-menu container-menu">
+                    <div class="opcao-menu" id="home"><a href="#">Home</a></div>
+                    <div class="opcao-menu" id="grupos"><a href="#">Grupos</a></div>
+                    <div class="opcao-menu" id="nossa_historia"><a href="#">Nossa História</a></div>
+                </div>
+            </div>
+        </nav>
     </header>
     <section id="section">
         <iframe src="homepage.html" frameborder="0" scrolling="no" id="homepage-iframe"></iframe>
     </section>
-    <script src="script/home.js">
+    <script src="script/home.js"></script>
+    <script src="script/sandwichMenu.js"></script>
     </script>
 </body>
 

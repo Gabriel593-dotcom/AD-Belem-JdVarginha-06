@@ -26,6 +26,53 @@ header {
     opacity: .7;
 }
 
+
+/*menu hamburguer*/
+
+.container-mobile-menu {
+    display: flex;
+    justify-content: right;
+}
+
+#btn-mobile {
+    display: none;
+    position: absolute;
+    top: 3%;
+    margin-right: 2%;
+    z-index: 2;
+    right: 2%;
+}
+
+@media only screen and (max-width: 550px) {
+    #btn-mobile {
+        display: block;
+    }
+    .menu-bg {
+        opacity: 1;
+    }
+    .opcao-menu {
+        display: none;
+    }
+}
+
+#nav.active .opcao-menu {
+    display: flex;
+    margin-bottom: 2%;
+    width: 90%;
+    padding: 2% 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .6);
+}
+
+#nav.active .opcoes-menu {
+    position: absolute;
+    display: block;
+    top: 60px;
+    transition: .6;
+    height: 440px;
+    background-color: #4682B4;
+    z-index: 1000;
+}
+
 .menu {
     position: absolute;
     width: 100%;
@@ -35,10 +82,16 @@ header {
 }
 
 .opcoes-menu {
+    position: relative;
+    width: 100%;
+    top: 20px;
+}
+
+.opcao-menu {
     margin-left: 16px;
 }
 
-.opcoes-menu a {
+.opcao-menu a {
     font-size: 18px;
     font-family: Arial;
     font-weight: bold;
@@ -46,7 +99,7 @@ header {
     text-decoration: none;
 }
 
-.opcoes-menu a:hover {
+.opcao-menu a:hover {
     font-size: 20px;
     cursor: pointer;
 }
