@@ -42,14 +42,16 @@ header {
 #btn-mobile {
     display: none;
     position: absolute;
-    padding: 1% 1%;
-    top: 3%;
+    top: 0;
     z-index: 2;
     right: 2%;
     font-size: 1rem;
+    padding: 2% 2%;
+    top: 2%;
     background: none;
     border: none;
     width: 40px;
+    height: 40px;
 }
 
 #hamburguer {
@@ -57,7 +59,6 @@ header {
     color: #FFF;
     border-top: 2px solid;
     width: 20px;
-    right: 50%;
 }
 
 #hamburguer::before,
@@ -81,7 +82,7 @@ header {
 #nav.active #hamburguer::after {
     position: absolute;
     transform: rotate(-135deg);
-    top: 10%;
+    top: 9%;
 }
 
 @media only screen and (max-width: 550px) {
@@ -89,7 +90,8 @@ header {
         height: 60px;
     }
     #btn-mobile {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
     .menu-bg {
         opacity: 1;
