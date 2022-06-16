@@ -223,6 +223,6 @@ header {
     }
     .facebook-instagram,
     .whatsapp {
-        align-items: left;
+        align-items: flex-start;
     }
 }
