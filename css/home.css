@@ -221,4 +221,8 @@ header {
     .socialmedias-container {
         flex-direction: column;
     }
+    .facebook-instagram,
+    .whatsapp {
+        align-items: left;
+    }
 }
