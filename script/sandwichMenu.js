@@ -6,6 +6,6 @@ function toggleMenu() {
     const nav = document.getElementById("nav");
     nav.classList.toggle("active");
 
-    const mobileSection = document.getElementById("section");
+    const mobileSection = document.getElementById("content-container");
     mobileSection.classList.toggle("active");
 }

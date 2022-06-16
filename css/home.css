@@ -118,8 +118,8 @@ header {
     transition: .6s;
 }
 
-#section.active {
-    top: 500px;
+#content-container.active {
+    margin-top: 500px;
 }
 
 .menu {
