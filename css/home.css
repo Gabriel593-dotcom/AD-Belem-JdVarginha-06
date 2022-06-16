@@ -5,6 +5,20 @@ body {
     background-color: #D3D3D3;
 }
 
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #696969;
+    border-radius: 20px;
+    border: 1px solid #D3D3D3;
+}
+
 .container-container {
     display: flex;
     flex-direction: row;
@@ -85,26 +99,6 @@ header {
     top: 9%;
 }
 
-@media only screen and (max-width: 550px) {
-    header {
-        height: 60px;
-    }
-    #btn-mobile {
-        display: flex;
-        justify-content: center;
-    }
-    .menu-bg {
-        opacity: 1;
-    }
-    .opcao-menu {
-        visibility: hidden;
-        overflow-y: hidden;
-    }
-    .opcoes-menu {
-        transition: .6s;
-    }
-}
-
 #nav.active .opcao-menu {
     margin-bottom: 2%;
     width: 90%;
@@ -167,4 +161,64 @@ header {
 #section iframe {
     width: 100%;
     border: none;
+}
+
+.footer-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    height: 30%;
+    background-color: #1C1C1C;
+}
+
+.socialmedias-container {
+    position: absolute;
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    right: 0;
+    top: 0;
+    color: #FFF;
+    font-family: "Arial";
+    font-size: 14px;
+    height: 100%;
+}
+
+.facebook-instagram,
+.whatsapp {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 6%;
+}
+
+.facebook-instagram p,
+.whatsapp p {
+    margin-bottom: 1%;
+}
+
+@media only screen and (max-width: 550px) {
+    header {
+        height: 60px;
+    }
+    #btn-mobile {
+        display: flex;
+        justify-content: center;
+    }
+    .menu-bg {
+        opacity: 1;
+    }
+    .opcao-menu {
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .opcoes-menu {
+        transition: .6s;
+    }
+    .socialmedias-container {
+        flex-direction: column;
+    }
 }

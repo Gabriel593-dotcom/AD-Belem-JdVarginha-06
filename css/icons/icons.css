@@ -1,0 +1,23 @@
+.fi-rs-facebook {
+    content: url("../../icons/svg/fi-rs-facebook.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.fi-rs-instagram {
+    content: url("../../icons/svg/fi-rs-instagram.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.fi-rs-whatsapp {
+    content: url("../../icons/svg/fi-rs-whatsapp.svg");
+    width: 30px;
+    height: 30px;
+}
+
+.fi-rs-location {
+    content: url("../../icons/img/fi-rs-location.png");
+    width: 30px;
+    height: 30px;
+}

@@ -11,28 +11,10 @@ body {
     width: 70%;
 }
 
-@media only screen and (max-width: 550px) {
-    .container {
-        width: 100%;
-    }
-}
-
 .title-container {
     display: flex;
     justify-content: center;
     margin-bottom: 2%;
-}
-
-@media only screen and (min-width: 550px) {
-    .title-container {
-        display: flex;
-        justify-content: center;
-        width: 95%;
-        margin-left: 2%;
-    }
-    .title-container h1 {
-        font-size: 4em;
-    }
 }
 
 .title-container h1 {
@@ -49,13 +31,6 @@ body {
     margin-bottom: 15px;
     margin-left: 2%;
     text-align: center;
-}
-
-@media only screen and (max-width: 550px) {
-    .news {
-        width: 95%;
-        margin-left: none;
-    }
 }
 
 .news .news-title h2 {
@@ -104,6 +79,28 @@ body {
 }
 
 @media only screen and (max-width: 550px) {
+    .container {
+        width: 100%;
+    }
+    .news {
+        width: 95%;
+        margin-left: none;
+    }
+    .news div p {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .title-container {
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        margin-left: 2%;
+    }
+    .title-container h1 {
+        font-size: 4em;
+    }
     .news div p {
         text-align: left;
     }
