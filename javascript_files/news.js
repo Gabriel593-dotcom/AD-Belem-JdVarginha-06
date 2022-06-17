@@ -7,5 +7,5 @@ export const news = [{
         "title": "teste",
         "imgUrl": "../imagens/header.jpg",
         "subTitle": "Aqui estamos nós realizando um teste para a homepage"
-    },
+    }
 ];
