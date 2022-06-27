@@ -31,9 +31,10 @@ body {
     height: 250px;
     background-color: #4F4F4F;
     border-right: 20px solid #4F4F4F;
+    border-left: 20px solid #4F4F4F;
     border-radius: 10px;
     margin-bottom: 7%;
-    padding: 2% 0 0 1%;
+    padding: 2% 0 0 0;
     overflow-x: scroll;
 }
 
@@ -117,7 +118,7 @@ body {
     }
     .fixed-news-container {
         width: 84%;
-        padding: 20px 0 0 20px;
+        padding: 20px 0 0 0;
     }
     .news {
         width: 95%;
