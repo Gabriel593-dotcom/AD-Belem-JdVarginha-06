@@ -36,14 +36,8 @@ body {
     overflow-x: scroll;
 }
 
-.fixed-news-container::-webkit-scrollbar {
-    background-color: transparent;
-}
-
-.fixed-news-container::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
+.fixed-news-container::-webkit-scrollbar,
+.fixed-news-container::-webkit-scrollbar-track,
 .fixed-news-container::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
@@ -113,6 +107,10 @@ body {
 @media only screen and (max-width: 550px) {
     .container {
         width: 100%;
+    }
+    .fixed-news-container {
+        width: 84%;
+        padding: 20px 20px 7px 20px;
     }
     .news {
         width: 95%;
