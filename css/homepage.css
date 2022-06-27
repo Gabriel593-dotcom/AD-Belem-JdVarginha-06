@@ -8,7 +8,8 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    align-items: center;
+    width: 100%;
 }
 
 .title-container {
@@ -23,13 +24,44 @@ body {
     font-weight: bolder;
 }
 
+.fixed-news-container {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+    height: 250px;
+    background-color: #4F4F4F;
+    border-radius: 10px;
+    margin-bottom: 7%;
+    padding: 2% 2% 1% 1%;
+    overflow-x: scroll;
+}
+
+.fixed-news-container::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+.fixed-news-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.fixed-news-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.fixed-news {
+    min-width: 155px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #000;
+    margin-left: 1%;
+}
+
 .news {
     background-color: #808080;
     border-radius: 5px;
-    width: 95%;
+    width: 70%;
     height: 25%;
     margin-bottom: 15px;
-    margin-left: 2%;
     text-align: center;
 }
 
