@@ -1,15 +1,21 @@
 let fixedNews = document.querySelectorAll(".fixed-news");
 let modalContainer = document.querySelector(".modal-container");
 let modal = document.getElementById("modal");
+let closeBtn = document.getElementById("close-modal");
 
-export function openModal() {
+function openModal() {
     fixedNews.forEach(element => {
         element.addEventListener("click", () => {
             flagModalWithActive();
-            let modalScrollYPosition = modal.getBoundingClientRect().top + modal.scrollHeight;
-            parent.window.scrollTo(0, modalScrollYPosition);
-            parent.document.documentElement.style.overflow = 'hidden';
+            parent.window.scrollTo(0, 0);
         });
+    });
+}
+
+function closeModal() {
+    closeBtn.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+        removeActiveFromModal();
     });
 }
 
@@ -30,3 +36,10 @@ function removeActiveFromModal() {
 function isActive() {
     return modalContainer.getAttribute("class").toString().includes("active") ? true : false;
 }
+
+function main() {
+    openModal();
+    closeModal();
+}
+
+main();
