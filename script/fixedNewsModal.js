@@ -4,19 +4,14 @@ let modal = document.getElementById("modal");
 let closeBtn = document.getElementById("close-modal");
 
 function openModal() {
-    fixedNews.forEach(element => {
-        element.addEventListener("click", () => {
-            flagModalWithActive();
-            parent.window.scrollTo(0, 0);
-        });
-    });
+    flagModalWithActive();
+    parent.window.scrollTo(0, 0);
+    modalContainer.style.display = "flex";
 }
 
 function closeModal() {
-    closeBtn.addEventListener("click", () => {
-        modalContainer.style.display = "none";
-        removeActiveFromModal();
-    });
+    modalContainer.style.display = "none";
+    removeActiveFromModal();
 }
 
 function mountModal() {
@@ -38,8 +33,17 @@ function isActive() {
 }
 
 function main() {
-    openModal();
-    closeModal();
+    fixedNews.forEach(element => {
+        element.addEventListener("click", () => {
+            openModal();
+        });
+    });
+
+
+    closeBtn.addEventListener("click", () => {
+        closeModal();
+    });
+
 }
 
 main();
