@@ -204,9 +204,6 @@ body {
         width: 95%;
         margin-left: none;
     }
-    .news div p {
-        text-align: left;
-    }
 }
 
 @media only screen and (min-width: 550px) {
@@ -218,8 +215,5 @@ body {
     }
     .title-container h1 {
         font-size: 4em;
-    }
-    .news div p {
-        text-align: left;
     }
 }
