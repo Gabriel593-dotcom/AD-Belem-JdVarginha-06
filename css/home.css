@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-color: #D3D3D3;
+    background-color: #1C1C1C;
 }
 
 body::-webkit-scrollbar {
@@ -174,7 +174,7 @@ header {
     font-size: 14px;
     width: 100%;
     height: 25%;
-    background-color: #1C1C1C;
+    background-color: #000000;
 }
 
 .location-container {

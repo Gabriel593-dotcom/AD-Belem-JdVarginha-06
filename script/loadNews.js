@@ -1,5 +1,5 @@
 export function createNewsElements(parentElement, news) {
-    news.forEach(newsEl => {
+    news.forEach(newsEl => {    
         let newsElement = document.createElement("div");
         newsElement.setAttribute("class", "news");
         let newsTitle = document.createElement("div");

@@ -1,3 +1,5 @@
+import {isMobile} from "./Utils.js";
+
 let subTitleElementTexts = [];
 let subTitleElements = "";
 let homeIframe = parent.document.getElementById("homepage-iframe");
@@ -58,16 +60,4 @@ function addSeeMoreElement(index, element) {
         homeIframe.height = height;
     });
     return seeMore;
-}
-
-function isMobile() {
-    let result = true;
-    let displayWidth = window.screen.width;
-    let displayHeight = window.screen.height;
-
-    if (!(displayHeight < 900 && displayWidth < 600)) {
-        result = false;
-    }
-
-    return result;
 }
