@@ -42,7 +42,7 @@ body {
     display: none;
     position: absolute;
     width: 70%;
-    height: 50%;
+    min-height: 70%;
     z-index: 1000;
     color: #FFF;
     border: 1px solid #fff;

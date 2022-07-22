@@ -1,11 +1,9 @@
 import {isMobile} from "./Utils.js";
 
 let subTitleElementTexts = [];
-let subTitleElements = "";
 let homeIframe = parent.document.getElementById("homepage-iframe");
 
-export function fillArray() {
-    subTitleElements = document.querySelectorAll(".news-subtitle p");
+export function fillArray(subTitleElements) {
     let iterable = 0;
     subTitleElements.forEach(element => {
         subTitleElementTexts[iterable] = element.innerText;
@@ -13,7 +11,7 @@ export function fillArray() {
     });
 }
 
-export function setSeeMoreOnLoadingPage() {
+export function setSeeMoreOnLoadingPage(subTitleElements) {
     let iterator = 0;
     subTitleElements.forEach(subTitle => {
         if ((isMobile() && subTitleElementTexts[iterator].length > 85) || subTitleElementTexts[iterator].length > 210) {
