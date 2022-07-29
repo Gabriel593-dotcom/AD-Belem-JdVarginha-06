@@ -2,13 +2,12 @@ let modalContainer = document.querySelector(".modal-container");
 
 export function openModal(fixedNewsEl) {
     flagModalWithActive();
-    parent.window.scrollTo(0, 0);
+    //parent.window.scrollTo(0, 0);
     modalContainer.style.display = "flex";
     mountModal(fixedNewsEl);
 }
 
-
-function mountModal(fixedNewsEl) {
+export function mountModal(fixedNewsEl) {
     let modal = document.createElement("div");
     modal.setAttribute("id", "modal");
     
@@ -27,6 +26,11 @@ function mountModal(fixedNewsEl) {
     closeModal.append(closeModalButton);
     modal.append(closeModal);
 
+    let modalId = document.createElement("p")
+    modalId.setAttribute("id", "modal-id")
+    modalId.innerText = fixedNewsEl.id;
+    modalId.style.display = "none";
+
     let title = document.createElement("h2");
     title.setAttribute("class", "modal-title");
     title.innerText = fixedNewsEl.title;
@@ -39,6 +43,7 @@ function mountModal(fixedNewsEl) {
     subTitle.setAttribute("class", "modal-subtitle");
     subTitle.innerText = fixedNewsEl.subTitle;
 
+    modal.append(modalId);
     modal.append(title); 
     modal.append(img);
     modal.append(subTitle);
@@ -46,16 +51,16 @@ function mountModal(fixedNewsEl) {
     modalContainer.append(modal);
 }
 
-function flagModalWithActive() {
+export function flagModalWithActive() {
     modalContainer.classList.add("active");
 }
 
-function removeActiveFromModal() {
+export function removeActiveFromModal() {
     if (isActive()) {
         modalContainer.classList.remove("active");
     }
 }
 
-function isActive() {
+export function isActive() {
     return modalContainer.getAttribute("class").toString().includes("active") ? true : false;
 }
