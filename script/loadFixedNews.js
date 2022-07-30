@@ -1,6 +1,6 @@
 import { openModal } from "./loadFixedNewsModal.js";
 
-let fixedNewsBackgroundColors = ["#1abc9c", "#34495e", "#2c3e50", "#c0392b", "#e74c3c", "#2980b9", "#3498db"];
+let fixedNewsBackgroundColors = ["#34495e", "#2c3e50", "#2980b9", "#3498db"];
 
 export function createFixedNewsElements(parentElement, fixedNews) {
     chooseColor();
