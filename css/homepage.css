@@ -273,6 +273,7 @@ body {
     .news {
         width: 95%;
         margin-left: none;
+        padding: 0;
     }
 }
 
