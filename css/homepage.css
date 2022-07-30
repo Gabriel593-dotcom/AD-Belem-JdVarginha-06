@@ -123,7 +123,7 @@ body {
 }
 
 #btn-before {
-    margin-right: 85%;    
+    margin-right: 85%;
 }
 
 #btn-after {
@@ -257,14 +257,18 @@ body {
         top: 0;
     }
 
-    #btn-before {
-        margin-right: 20%;    
+    .modal-btns:hover {
+        height: 60px;
+        width: 60px;
     }
-    
+
+    #btn-before {
+        margin-right: 20%;
+    }
+
     #btn-after {
         margin-left: 20%;
     }
-    
 
     .news {
         width: 95%;
