@@ -161,17 +161,28 @@ body {
 }
 
 .fixed-news {
-    min-width: 155px;
+    display: flex;
+    flex-direction: "column";
+    justify-content: center;
+    align-items: center;
+    min-width: 13%;
     height: 95%;
     border-radius: 10px;
-    background-color: #000;
     margin-left: 1%;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .fixed-news:hover {
     cursor: pointer;
-    min-width: 160px;
-    height: 100%;
+}
+
+.fixed-news .fixed-news-min-title {
+    color: #FFF;
+    font-size: 1em;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
 }
 
 #news-container {
@@ -268,6 +279,9 @@ body {
 
     #btn-after {
         margin-left: 20%;
+    }
+    .fixed-news {
+        min-width: 135px;
     }
 
     .news {
