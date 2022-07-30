@@ -12,5 +12,12 @@ export const fixedNews = [
     "title" : "Teste para o load das fixed news",
     "imageUrl" : "../imagens/header.jpg",
     "subTitle" : "Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias",
-   }
+   },
+   {
+      "id": 3,
+      "minTitle" : "Teste", 
+      "title" : "Teste Teste para o load das fixed news",
+      "imageUrl" : "../imagens/header.jpg",
+      "subTitle" : "Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias. Teste para o load das fixed news no clique dos elementos pinados no início do feed de notícias",
+     }
 ];
