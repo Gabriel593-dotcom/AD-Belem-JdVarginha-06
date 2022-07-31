@@ -216,7 +216,7 @@ header {
     margin-bottom: 1%;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
     header {
         height: 60px;
     }
