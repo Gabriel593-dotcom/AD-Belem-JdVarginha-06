@@ -40,8 +40,8 @@ body {
 }
 
 #modal {
-    display: none;
     position: absolute;
+    display: none;
     width: 70%;
     z-index: 1000;
     color: #FFF;

@@ -7,16 +7,15 @@ let homeIframe = parent.document.getElementById("homepage-iframe");
 export function setSeeMore(index, type, element) {
     switch (type) {
         case "fixedNews":
-            (index);
             if (verifySetSeeMore(index, fixedNews)) {
                 element.innerText = cutText(index, fixedNews);
-                element.append(addSeeMoreElement(index, element, fixedNews));
+                element.append(addSeeMoreElement(index, type, element, fixedNews));
             }
             break;
         case "news":
             if (verifySetSeeMore(index, news)) {
                 element.innerText = cutText(index, news);
-                element.append(addSeeMoreElement(index, element, news));
+                element.append(addSeeMoreElement(index, type, element, news));
             }
             break;
     }
@@ -34,33 +33,36 @@ function cutText(index, listText) {
     return text;
 }
 
-function addSeeLessElement(index, element, listText) {
+function addSeeLessElement(index, type, element, listText) {
     let seeLess = document.createElement("button");
     seeLess.innerText = "ver menos";
     seeLess.setAttribute("class", "news-subtitle-button");
     seeLess.addEventListener("click", () => {
         let elementExtendedHeight = element.scrollHeight;
         element.innerText = cutText(index, listText);
-        element.append(addSeeMoreElement(index, element, listText));
+        element.append(addSeeMoreElement(index, type, element, listText));
         let height = element.scrollHeight;
         height += homeIframe.scrollHeight - elementExtendedHeight;
-        homeIframe.height = height;
+        if (type == "news") {
+            homeIframe.height = height;
+        }
     });
     return seeLess;
 }
 
-function addSeeMoreElement(index, element, listText) {
+function addSeeMoreElement(index, type, element, listText) {
     let seeMore = document.createElement("button");
     seeMore.innerText = "...ver mais";
     seeMore.setAttribute("class", "news-subtitle-button");
     seeMore.addEventListener("click", () => {
         let elementReducedHeight = element.scrollHeight;
-        (listText[index].subTitle);
         element.innerText = listText[index].subTitle;
-        element.append(addSeeLessElement(index, element, listText));
+        element.append(addSeeLessElement(index, type, element, listText));
         let height = element.scrollHeight - elementReducedHeight;
         height += homeIframe.scrollHeight;
-        homeIframe.height = height;
+        if (type == "news") {
+            homeIframe.height = height;
+        }
     });
     return seeMore;
 }
