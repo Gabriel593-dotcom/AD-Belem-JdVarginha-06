@@ -1,43 +1,47 @@
-import {isMobile} from "./Utils.js";
+import { isMobile } from "./Utils.js";
+import { news } from "../javascript_files/news.js";
+import { fixedNews } from "../javascript_files/fixed-news.js";
 
-let subTitleElementTexts = [];
 let homeIframe = parent.document.getElementById("homepage-iframe");
 
-export function fillArray(subTitleElements) {
-    let iterable = 0;
-    subTitleElements.forEach(element => {
-        subTitleElementTexts[iterable] = element.innerText;
-        iterable++;
-    });
+export function setSeeMore(index, type, element) {
+    switch (type) {
+        case "fixedNews":
+            (index);
+            if (verifySetSeeMore(index, fixedNews)) {
+                element.innerText = cutText(index, fixedNews);
+                element.append(addSeeMoreElement(index, element, fixedNews));
+            }
+            break;
+        case "news":
+            if (verifySetSeeMore(index, news)) {
+                element.innerText = cutText(index, news);
+                element.append(addSeeMoreElement(index, element, news));
+            }
+            break;
+    }
 }
 
-export function setSeeMoreOnLoadingPage(subTitleElements) {
-    let iterator = 0;
-    subTitleElements.forEach(subTitle => {
-        if ((isMobile() && subTitleElementTexts[iterator].length > 85) || subTitleElementTexts[iterator].length > 210) {
-            subTitle.innerText = cutText(iterator);
-            subTitle.append(addSeeMoreElement(iterator, subTitle));
-        }
-        iterator++;
-    });
+function verifySetSeeMore(index, listText) {
+    return (isMobile() && listText[index].subTitle.length > 85 || listText[index].subTitle.length > 210);
 }
 
-function cutText(index) {
-    let text = subTitleElementTexts[index].substring(0, 210);
+function cutText(index, listText) {
+    let text = listText[index].subTitle.substring(0, 210);
     if (isMobile()) {
-        text = subTitleElementTexts[index].substring(0, 85);
+        text = listText[index].subTitle.substring(0, 85);
     }
     return text;
 }
 
-function addSeeLessElement(index, element) {
+function addSeeLessElement(index, element, listText) {
     let seeLess = document.createElement("button");
     seeLess.innerText = "ver menos";
     seeLess.setAttribute("class", "news-subtitle-button");
     seeLess.addEventListener("click", () => {
         let elementExtendedHeight = element.scrollHeight;
-        element.innerText = cutText(index);
-        element.append(addSeeMoreElement(index, element));
+        element.innerText = cutText(index, listText);
+        element.append(addSeeMoreElement(index, element, listText));
         let height = element.scrollHeight;
         height += homeIframe.scrollHeight - elementExtendedHeight;
         homeIframe.height = height;
@@ -45,14 +49,15 @@ function addSeeLessElement(index, element) {
     return seeLess;
 }
 
-function addSeeMoreElement(index, element) {
+function addSeeMoreElement(index, element, listText) {
     let seeMore = document.createElement("button");
     seeMore.innerText = "...ver mais";
     seeMore.setAttribute("class", "news-subtitle-button");
     seeMore.addEventListener("click", () => {
         let elementReducedHeight = element.scrollHeight;
-        element.innerText = subTitleElementTexts[index];
-        element.append(addSeeLessElement(index, element));
+        (listText[index].subTitle);
+        element.innerText = listText[index].subTitle;
+        element.append(addSeeLessElement(index, element, listText));
         let height = element.scrollHeight - elementReducedHeight;
         height += homeIframe.scrollHeight;
         homeIframe.height = height;

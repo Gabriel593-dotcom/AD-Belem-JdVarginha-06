@@ -3,7 +3,7 @@ import { openModal } from "./loadFixedNewsModal.js";
 let fixedNewsBackgroundColors = ["#34495e", "#2c3e50", "#2980b9", "#3498db"];
 
 export function createFixedNewsElements(parentElement, fixedNews) {
-    chooseColor();
+    let iterator = 0;
     fixedNews.forEach(fixedNewsEl => {    
         let fixedNewsComponent = document.createElement("div");
         fixedNewsComponent.setAttribute("class", "fixed-news");
@@ -12,14 +12,15 @@ export function createFixedNewsElements(parentElement, fixedNews) {
         fixedNewsComponentText.setAttribute("class", "fixed-news-min-title");
         fixedNewsComponentText.innerText = fixedNewsEl.minTitle;
         fixedNewsComponent.append(fixedNewsComponentText);
-        openModalEvent(fixedNewsComponent, fixedNewsEl);
+        openModalEvent(iterator, fixedNewsComponent, fixedNewsEl);
         parentElement.append(fixedNewsComponent);
+        iterator++;
     });
 }
 
-function openModalEvent(fixedNewsComponent, fixedNewsEl){
+function openModalEvent(index, fixedNewsComponent, fixedNewsEl){
     fixedNewsComponent.addEventListener("click", () => {
-        openModal(fixedNewsEl);
+        openModal(index, fixedNewsEl);
     });
 }
 

@@ -1,4 +1,7 @@
+import { setSeeMore } from "./seeMore.js";
+
 export function createNewsElements(parentElement, news) {
+    let iterator = 0;
     news.forEach(newsEl => {    
         let newsElement = document.createElement("div");
         newsElement.setAttribute("class", "news");
@@ -14,8 +17,13 @@ export function createNewsElements(parentElement, news) {
         newsImage.append(img);
         let newsSubTitle = document.createElement("div");
         newsSubTitle.setAttribute("class", "news-subtitle");
+        
         let p = document.createElement("p");
         p.innerText = newsEl.subTitle;
+        setSeeMore(iterator, "news", p);
+        iterator++;
+
+
         newsSubTitle.append(p);
         let hr = document.createElement("hr");
 

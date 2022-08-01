@@ -1,13 +1,14 @@
+import { setSeeMore } from "./seeMore.js";
 let modalContainer = document.querySelector(".modal-container");
 
-export function openModal(fixedNewsEl) {
+export function openModal(index, fixedNewsEl) {
     flagModalWithActive();
     //parent.window.scrollTo(0, 0);
     modalContainer.style.display = "flex";
-    mountModal(fixedNewsEl);
+    mountModal(index, fixedNewsEl);
 }
 
-export function mountModal(fixedNewsEl) {
+export function mountModal(index, fixedNewsEl) {
     let modal = document.createElement("div");
     modal.setAttribute("id", "modal");
     
@@ -42,6 +43,7 @@ export function mountModal(fixedNewsEl) {
     let subTitle = document.createElement("p");
     subTitle.setAttribute("class", "modal-subtitle");
     subTitle.innerText = fixedNewsEl.subTitle;
+    setSeeMore(index, "fixedNews", subTitle); 
 
     modal.append(modalId);
     modal.append(title); 
